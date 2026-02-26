@@ -31,6 +31,7 @@ repositories {
 
 // Dependencies are managed with Gradle version catalog - read more: https://docs.gradle.org/current/userguide/platforms.html#sub:version-catalog
 dependencies {
+    compileOnly(kotlin("stdlib", "2.2.0"))
     testImplementation(libs.junit)
 
     // IntelliJ Platform Gradle Plugin Dependencies Extension - read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin-dependencies-extension.html
@@ -52,6 +53,12 @@ dependencies {
 
 // Configure IntelliJ Platform Gradle Plugin - read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin-extension.html
 intellijPlatform {
+    // Extract IDE to plugin cache so product-info.json is available (avoids Gradle transform path)
+    caching {
+        ides {
+            enabled.set(true)
+        }
+    }
     pluginConfiguration {
         version = providers.gradleProperty("pluginVersion")
 
@@ -102,9 +109,9 @@ intellijPlatform {
     }
 
     pluginVerification {
-        ides {
-            recommended()
-        }
+        // recommended() can fail with product-info.json resolution when using 2025.3.x (transform path).
+        // Omit ides or add explicit versions (e.g. ides("IU-2025.3.3")) when running verifyPlugin.
+        ides { }
     }
 }
 
