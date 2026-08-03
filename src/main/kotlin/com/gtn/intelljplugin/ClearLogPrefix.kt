@@ -1,4 +1,4 @@
-package com.github.chandulajpdm.intelljplugin
+package com.gtn.intelljplugin
 
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent

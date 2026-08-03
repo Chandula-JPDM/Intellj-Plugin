@@ -1,4 +1,4 @@
-package com.github.chandulajpdm.intelljplugin
+package com.gtn.intelljplugin
 
 import com.intellij.DynamicBundle
 import org.jetbrains.annotations.NonNls

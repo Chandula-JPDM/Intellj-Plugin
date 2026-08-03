@@ -9,7 +9,7 @@
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.chandulajpdm.intelljplugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <toolWindow factoryClass="com.gtn.intelljplugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
     </extensions>
 
 
@@ -17,13 +17,13 @@
 
         <group id="com.github.chandulajpdm.intelljplugin" text="Log Prefix Manager " description="Clear and insert line numers to log entries automatically" popup="true">
             <!-- Add your actions here -->
-            <action id="loggerClear" class="com.github.chandulajpdm.intelljplugin.ClearLogPrefix" text="Clear Log Prefix"
+            <action id="loggerClear" class="com.gtn.intelljplugin.ClearLogPrefix" text="Clear Log Prefix"
                     description="Clear line number and class name automatically from log entries">
                 <!-- <add-to-group group-id="ProjectViewPopupMenu"      anchor="first"/>-->
                 <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt K"/>
             </action>
 
-            <action id="loggerUpdate" class="com.github.chandulajpdm.intelljplugin.UpdateLogPrefix" text="Update Log Prefix"
+            <action id="loggerUpdate" class="com.gtn.intelljplugin.UpdateLogPrefix" text="Update Log Prefix"
                     description="Clear and insert line numers to log entries as prefix automatically">
                 <!--<add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>-->
 

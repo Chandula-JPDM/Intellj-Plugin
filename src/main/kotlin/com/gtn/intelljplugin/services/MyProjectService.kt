@@ -1,9 +1,9 @@
-package com.github.chandulajpdm.intelljplugin.services
+package com.gtn.intelljplugin.services
 
 import com.intellij.openapi.components.Service
 import com.intellij.openapi.diagnostic.thisLogger
 import com.intellij.openapi.project.Project
-import com.github.chandulajpdm.intelljplugin.MyBundle
+import com.gtn.intelljplugin.MyBundle
 
 @Service(Service.Level.PROJECT)
 class MyProjectService(project: Project) {

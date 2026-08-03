@@ -1,4 +1,4 @@
-package com.github.chandulajpdm.intelljplugin.listeners
+package com.gtn.intelljplugin.listeners
 
 import com.intellij.openapi.application.ApplicationActivationListener
 import com.intellij.openapi.diagnostic.thisLogger
